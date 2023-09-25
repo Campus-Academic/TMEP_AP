@@ -21,3 +21,7 @@ flutter pub get
 
 flutter run
 ```
+
+### Contributor
+
+- Project Manager: [LAIHUNGWEI](https://github.com/s990093)
