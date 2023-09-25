@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppLayout extends StatefulWidget {
   const AppLayout({super.key});
@@ -8,20 +10,20 @@ class AppLayout extends StatefulWidget {
 }
 
 class _AppLayoutState extends State<AppLayout> {
-  int _currentIndex = 0;
+  int _currentIndex = 0; // 当前选中的底部导航栏项的索引
 
   // 底部导航栏的页面
   final List<Widget> _pages = [
-    const HomeScreen(),
-    const UserProfileScreen(),
-    const SettingsScreen(),
+    HomeScreen(),
+    UserProfileScreen(),
+    SettingsScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My App'),
+        title: Text('My App'),
       ),
       body: Stack(
         children: [
@@ -39,7 +41,7 @@ class _AppLayoutState extends State<AppLayout> {
                   _currentIndex = index; // 切换页面
                 });
               },
-              items: const [
+              items: [
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
                   label: 'Home',
@@ -62,33 +64,27 @@ class _AppLayoutState extends State<AppLayout> {
 }
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Home Page'),
+    return Center(
+      child: Text(AppLocalizations.of(context)!.helloWorld),
     );
   }
 }
 
 class UserProfileScreen extends StatelessWidget {
-  const UserProfileScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Text('User Profile Page'),
     );
   }
 }
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Text('Settings Page'),
     );
   }

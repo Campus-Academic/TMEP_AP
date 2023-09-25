@@ -1,0 +1,19 @@
+# 通用设置
+root = true
+
+# 使用空格缩进，每级缩进为 4 个空格
+[*]
+# indent_style = space
+# indent_size = 4
+
+# 在文件末尾插入空行
+[*.{js,jsx,ts,tsx,css,scss,html,xml,yml,yaml,json}]
+insert_final_newline = true
+
+# 删除行尾多余的空格
+[*.{js,jsx,ts,tsx,css,scss,html,xml,yml,yaml,json}]
+trim_trailing_whitespace = true
+
+# 针对特定文件类型的配置
+[*.md]
+trim_trailing_whitespace = false
