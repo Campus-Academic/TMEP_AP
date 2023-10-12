@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppLayout extends StatefulWidget {
@@ -14,16 +13,16 @@ class _AppLayoutState extends State<AppLayout> {
 
   // 底部导航栏的页面
   final List<Widget> _pages = [
-    HomeScreen(),
-    UserProfileScreen(),
-    SettingsScreen(),
+    const HomeScreen(),
+    const UserProfileScreen(),
+    const SettingsScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My App'),
+        title: const Text('My App'),
       ),
       body: Stack(
         children: [
@@ -41,7 +40,7 @@ class _AppLayoutState extends State<AppLayout> {
                   _currentIndex = index; // 切换页面
                 });
               },
-              items: [
+              items: const [
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
                   label: 'Home',
@@ -64,6 +63,8 @@ class _AppLayoutState extends State<AppLayout> {
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -73,18 +74,22 @@ class HomeScreen extends StatelessWidget {
 }
 
 class UserProfileScreen extends StatelessWidget {
+  const UserProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('User Profile Page'),
     );
   }
 }
 
 class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Settings Page'),
     );
   }

@@ -22,10 +22,10 @@ class APP extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: [
-        Locale('en'), // 支持的语言配置
-        Locale('zh'), // 支持的语言配置，中文
+        Locale('en'), // en
+        Locale('zh'), //taiwan
       ],
-      home: AppLayout(), // 使用 AppLayout 作为根页面
+      home: AppLayout(),
     );
   }
 }
