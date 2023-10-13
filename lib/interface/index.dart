@@ -1,1 +1,1 @@
-export './CourseData.dart';
+export 'course_data.dart';

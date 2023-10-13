@@ -16,13 +16,15 @@ import 'package:app_template_v0/main.dart';
 import 'dart:convert';
 
 void main() async {
-  final File file = File('lib/mock/CourseData.json');
-  final String jsonString = await file.readAsString();
-  final dynamic jsonData = json.decode(jsonString);
+  testWidgets('Test case 1', (WidgetTester tester) async {
+    final File file = File('lib/mock/CourseData.json');
+    final String jsonString = await file.readAsString();
+    final dynamic jsonData = json.decode(jsonString);
 
-  final List<Course> courses = [];
+    final List<Course> courses = [];
 
-  for (final courseJson in jsonData['courses']) {
-    print(courseJson);
-  }
+    for (final courseJson in jsonData['courses']) {
+      print(courseJson);
+    }
+  });
 }

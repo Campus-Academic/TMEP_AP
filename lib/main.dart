@@ -22,8 +22,8 @@ class APP extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: [
-        Locale('en'), // en
-        Locale('zh'), //taiwan
+        Locale('en'),
+        Locale('zh'),
       ],
       home: AppLayout(),
     );

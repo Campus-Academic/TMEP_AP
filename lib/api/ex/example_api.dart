@@ -8,7 +8,7 @@ import 'constant/url.dart';
 import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' as htmlParser;
 
-Future<List<Course>> get_class_schedule_ex(String uid, String password) async {
+Future<List<Course>> getClassScheduleEx(String uid, String password) async {
   // 使用conf 裡面的常數
   final List<Course> courses = [];
 
