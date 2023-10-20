@@ -11,7 +11,6 @@ import 'package:flutter/material.dart';
 ///  * Routing
 ///  * Main screen cards
 ///
-
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
