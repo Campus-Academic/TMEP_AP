@@ -47,8 +47,10 @@ class AppRoutes {
     // authentication
     GetPage(name: AuthRouters.login, page: () => const BaseTestView()),
     GetPage(name: AuthRouters.logout, page: () => const BaseTestView()),
-    // GetPage(name: '/profile', page: () => UserProfileScreen()),
-    // GetPage(name: '/settings', page: () => SettingsScreen()),
+    //  error
+    GetPage(name: RouterConf.error, page: () => const ErrorPage()),
+    // notfound
+    GetPage(name: RouterConf.notFound, page: () => const ErrorPage()),
   ];
 
   static const String initialRoute = RouterConf.init;

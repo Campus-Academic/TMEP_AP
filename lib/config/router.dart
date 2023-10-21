@@ -5,6 +5,8 @@
 /// This class defines the route paths for different sections of the app.
 class RouterConf {
   static const String init = '/'; // The initial route for the app.
+  static const String error = '/error'; // The error route for the app.
+  static const String notFound = ''; // The notfound route for the app.
   static final CoreRoutes core = CoreRoutes();
   static final FuncRoutes func = FuncRoutes();
   static final AuthRouters auth = AuthRouters();

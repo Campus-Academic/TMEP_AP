@@ -9,7 +9,12 @@ import 'package:app_template_v0/router.dart';
 // bloc
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:app_template_v0/bloc/auth_bloc.dart';
-// Copyright 2023 The Flutter Authors. All rights reserved.
+// theme
+import 'package:app_template_v0/theme/index.dart';
+// helpers
+import 'package:app_template_v0/helper/index.dart';
+
+// Copyriht 2023 The Flutter Authors. All rights reserved.
 // Author: 賴泓瑋
 
 /// The settings entry point for this app
@@ -23,6 +28,7 @@ import 'package:app_template_v0/bloc/auth_bloc.dart';
 void main() {
   runApp(
     MaterialApp(
+      theme: isNightTime() ? nightTheme : dayTheme,
       home: BlocProvider(
         create: (_) => AuthBloc(),
         child: const APP(),

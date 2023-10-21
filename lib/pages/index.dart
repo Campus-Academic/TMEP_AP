@@ -14,3 +14,6 @@ export './school_links_page.dart';
 export './login_page.dart';
 // logout page
 export './logout_page.dart';
+
+// ORTHER =================================================================
+export './error_page.dart';
