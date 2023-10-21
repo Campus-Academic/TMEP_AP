@@ -6,6 +6,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 // routers
 import 'package:app_template_v0/router.dart';
+// bloc
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:app_template_v0/bloc/auth_bloc.dart';
 // Copyright 2023 The Flutter Authors. All rights reserved.
 // Author: 賴泓瑋
 
@@ -18,7 +21,14 @@ import 'package:app_template_v0/router.dart';
 ///  * routers
 ///
 void main() {
-  runApp(const APP());
+  runApp(
+    MaterialApp(
+      home: BlocProvider(
+        create: (_) => AuthBloc(),
+        child: const APP(),
+      ),
+    ),
+  );
 }
 
 class APP extends StatelessWidget {
@@ -28,7 +38,6 @@ class APP extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'My App',
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -46,6 +55,7 @@ class APP extends StatelessWidget {
 }
 
 // ------------------------------------------------------------------------------------------------
+// orther
 
 // class APP extends StatelessWidget {
 //   const APP({super.key});

@@ -1,3 +1,4 @@
+// flutter core
 import 'package:flutter/material.dart';
 
 // Copyright 2023 The Flutter Authors. All rights reserved.
@@ -17,9 +18,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

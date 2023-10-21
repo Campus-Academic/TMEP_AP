@@ -1,4 +1,4 @@
-part of 'auth_bloc_bloc.dart';
+part of 'auth_bloc.dart';
 
 @immutable
 sealed class AuthBlocEvent {
@@ -9,7 +9,7 @@ class LoginEvent extends AuthBlocEvent {
   final String username;
   final String password;
 
-  LoginEvent(this.username, this.password);
+  const LoginEvent(this.username, this.password);
 }
 
 class LogoutEvent extends AuthBlocEvent {}
@@ -17,5 +17,11 @@ class LogoutEvent extends AuthBlocEvent {}
 class ChangePasswordEvent extends AuthBlocEvent {
   final String newPassword;
 
-  ChangePasswordEvent(this.newPassword);
+  const ChangePasswordEvent(this.newPassword);
+}
+
+class UpdateLoginStatusEvent extends AuthBlocEvent {
+  final bool isLogged;
+
+  const UpdateLoginStatusEvent(this.isLogged);
 }
