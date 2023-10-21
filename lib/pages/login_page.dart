@@ -1,4 +1,13 @@
+// core
 import 'package:flutter/material.dart';
+// bloc
+import 'package:app_template_v0/bloc/index.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+// router
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+// conf
+import 'package:app_template_v0/config/index.dart';
 
 // Copyright 2023 The Flutter Authors. All rights reserved.
 // Author: 賴泓瑋
@@ -11,15 +20,16 @@ import 'package:flutter/material.dart';
 ///  * Routing
 ///  * Main screen cards
 ///
+
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  const LoginPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController usernameController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,11 +38,35 @@ class LoginPage extends StatelessWidget {
               '欢迎来到首页！',
               style: TextStyle(fontSize: 24.0),
             ),
-            ElevatedButton(
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                controller: usernameController,
+                decoration: const InputDecoration(
+                  labelText: '用户名',
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                controller: passwordController,
+                decoration: const InputDecoration(
+                  labelText: '密码',
+                ),
+                obscureText: true, // 隐藏密码
+              ),
+            ),
+            TextButton(
               onPressed: () {
-                // 在这里添加导航到其他页面的逻辑
+                final username = usernameController.text;
+                final password = passwordController.text;
+                context
+                    .read<AuthBloc>()
+                    .updateCredentials(username, password, true);
+                Get.offAllNamed(RouterConf.init);
               },
-              child: const Text('进入其他页面'),
+              child: const Text('登录'),
             ),
           ],
         ),

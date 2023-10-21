@@ -31,3 +31,9 @@ class AuthBlocError extends AuthBlocState {
 
   const AuthBlocError(this.error);
 }
+
+class AuthBlocLoggedInState extends AuthBlocState {
+  final bool isLogged;
+
+  const AuthBlocLoggedInState(this.isLogged);
+}

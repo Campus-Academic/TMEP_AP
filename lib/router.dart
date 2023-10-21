@@ -1,11 +1,14 @@
 // layout
 import 'package:app_template_v0/layout/app_layout.dart';
+// conf -> router
+import 'package:app_template_v0/config/index.dart';
 // pages
 import 'package:app_template_v0/pages/index.dart';
 // test page
 import 'package:app_template_v0/widgets/base/base_page.dart';
 // bloc
 import 'package:app_template_v0/bloc/auth_bloc.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 // router Get
 import 'package:get/get.dart';
@@ -25,14 +28,14 @@ import 'package:get/get.dart';
 class AppRoutes {
   static final List<GetPage> routes = [
     GetPage(
-        name: '/',
+        name: RouterConf.init,
         page: () {
           final context = Get.context;
           if (context != null) {
             final authBloc = BlocProvider.of<AuthBloc>(context);
-            // final isLogged = (authBloc.state is AuthBlocLoggedIn);
+            final isLogged = (authBloc.state is AuthBlocLoggedIn);
             // TODO: this is test isLogged
-            const isLogged = true;
+            // const isLogged = false;
 
             return isLogged ? const AppLayout() : const LoginPage();
           } else {
@@ -40,15 +43,13 @@ class AppRoutes {
             return const LoginPage(); // 或其他适当的操作
           }
         }),
-    GetPage(name: '/', page: () => const AppLayout()),
-    // core func
-    GetPage(name: '/home', page: () => const BaseTestView()),
+    GetPage(name: RouterConf.init, page: () => const AppLayout()),
     // authentication
-    GetPage(name: '/login', page: () => const BaseTestView()),
-    GetPage(name: '/logout', page: () => const BaseTestView()),
+    GetPage(name: AuthRouters.login, page: () => const BaseTestView()),
+    GetPage(name: AuthRouters.logout, page: () => const BaseTestView()),
     // GetPage(name: '/profile', page: () => UserProfileScreen()),
     // GetPage(name: '/settings', page: () => SettingsScreen()),
   ];
 
-  static const String initialRoute = '/';
+  static const String initialRoute = RouterConf.init;
 }

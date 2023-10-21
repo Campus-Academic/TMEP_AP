@@ -8,6 +8,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
 // widget
 import 'package:app_template_v0/layout/nav_bar.dart';
+// conf
+import 'package:app_template_v0/config/index.dart';
 // Copyright 2023 The Flutter Authors. All rights reserved.
 // Author: 賴泓瑋 , XXX ................
 
@@ -30,7 +32,7 @@ class AppLayout extends StatefulWidget {
 }
 
 class _AppLayoutState extends State<AppLayout> {
-  int _currentIndex = 0; // 当前选中的底部导航栏项的索引
+  int _currentIndex = SettingsManager.appLayoutCurrentIndex; // 当前选中的底部导航栏项的索引
 
   // 底部导航栏的页面
   final List<Widget> _pages = [
@@ -43,7 +45,7 @@ class _AppLayoutState extends State<AppLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My App'),
+        title: const Text('app layout'),
       ),
       body: Stack(
         children: [

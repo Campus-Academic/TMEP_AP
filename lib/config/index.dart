@@ -4,3 +4,5 @@ export './network.dart';
 export './setting.dart';
 // state
 export './state.dart';
+// router settings
+export './router.dart';

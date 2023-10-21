@@ -6,12 +6,12 @@ AppLayoutIcon appLayoutIcon = AppLayoutIcon(); // 创建一个AppLayoutIcon实�
 
 List<BottomNavigationBarItem> bottomNavigationBarItems = [
   BottomNavigationBarItem(
-    icon: appLayoutIcon.homeIcon,
-    label: '資訊',
-  ),
-  BottomNavigationBarItem(
     icon: appLayoutIcon.classIcon,
     label: '課表',
+  ),
+  BottomNavigationBarItem(
+    icon: appLayoutIcon.homeIcon,
+    label: '資訊',
   ),
   BottomNavigationBarItem(
     icon: appLayoutIcon.funcIcon,
