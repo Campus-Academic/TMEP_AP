@@ -1,9 +1,7 @@
 bool isNightTime() {
   int currentHour = DateTime.now().hour;
-  // 你可以根据自己的需求定义白天和夜间的时间范围
-  int nightStartHour = 18; // 夜间开始时间，这里设置为18点
-
-  return currentHour >= nightStartHour;
+  // 设置夜间模式时间范围为晚上6点到早上6点
+  return currentHour >= 18 || currentHour < 6;
 }
 
 void main() {

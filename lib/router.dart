@@ -50,7 +50,7 @@ class AppRoutes {
     //  error
     GetPage(name: RouterConf.error, page: () => const ErrorPage()),
     // notfound
-    GetPage(name: RouterConf.notFound, page: () => const ErrorPage()),
+    // GetPage(name: RouterConf.notFound, page: () => const ErrorPage()),
   ];
 
   static const String initialRoute = RouterConf.init;
