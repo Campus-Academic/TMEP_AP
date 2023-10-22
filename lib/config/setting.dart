@@ -8,6 +8,7 @@
 ///
 ///
 class SettingsManager {
+  // init
   static const bool isLogged = true;
   static const int appLayoutCurrentIndex = 1;
 }

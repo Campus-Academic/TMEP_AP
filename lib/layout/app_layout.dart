@@ -36,9 +36,9 @@ class _AppLayoutState extends State<AppLayout> {
 
   // 底部导航栏的页面
   final List<Widget> _pages = [
-    const SchoolLinksPage(),
-    const HomePage(),
     const ClassSchedulePage(),
+    const HomePage(),
+    const SchoolLinksPage(),
   ];
 
   @override

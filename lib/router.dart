@@ -43,7 +43,6 @@ class AppRoutes {
             return const LoginPage(); // 或其他适当的操作
           }
         }),
-    GetPage(name: RouterConf.init, page: () => const AppLayout()),
     // authentication
     GetPage(name: AuthRouters.login, page: () => const BaseTestView()),
     GetPage(name: AuthRouters.logout, page: () => const BaseTestView()),
