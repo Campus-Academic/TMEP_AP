@@ -22,12 +22,14 @@ import 'package:app_template_v0/utils/index.dart';
 ///
 /// Introduction:
 ///
-///  * localizationsDelegates
-///  * routers
+///  * LocalizationsDelegates
+///  * Theme
+///  * Router
 ///
 void main() {
   runApp(
     MaterialApp(
+      // Bloc state
       home: BlocProvider(
         create: (_) => AuthBloc(),
         child: const APP(),
@@ -54,6 +56,8 @@ class APP extends StatelessWidget {
         Locale('en'),
         Locale('zh'),
       ],
+      // TODO: default support ???
+      // locale: const Locale('zh'),
       // theme init
       theme: dayTheme,
       darkTheme: nightTheme,
