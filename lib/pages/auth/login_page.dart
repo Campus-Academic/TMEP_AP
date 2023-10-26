@@ -22,8 +22,8 @@ import 'package:app_template_v0/config/index.dart';
 ///  * Routing
 ///  * Main screen cards
 ///
-
 class LoginPage extends StatelessWidget {
+  // ignore: use_key_in_widget_constructors
   const LoginPage({Key? key});
 
   @override

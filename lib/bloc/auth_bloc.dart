@@ -55,6 +55,7 @@ class AuthBloc extends Bloc<AuthBlocEvent, AuthBlocState> {
       // ignore: invalid_use_of_visible_for_testing_member
       emit(AuthBlocLoggedIn(username, password, isLogged: true));
     } else {
+      // ignore: invalid_use_of_visible_for_testing_member
       emit(const AuthBlocLoggedOut(isLogged: false));
     }
   }
