@@ -1,95 +1,68 @@
 // flutter core
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-// localization
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-// routers
-import 'package:app_template_v0/router.dart';
-// bloc
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:app_template_v0/bloc/auth_bloc.dart';
-// theme
-import 'package:app_template_v0/theme/index.dart';
-// until
-import 'package:app_template_v0/utils/index.dart';
 
-// Copyriht 2023 The Flutter Authors. All rights reserved.
-// Author: 賴泓瑋
+import 'package:app_template_v0/app_widget.dart';
 
 /// The settings entry point for this app
 
-///
-/// Introduction:
-///
-///  * LocalizationsDelegates
-///  * Theme
-///  * Router
-///
 void main() {
-  runApp(
-    MaterialApp(
-      // Bloc state
-      home: BlocProvider(
-        create: (_) => AuthBloc(),
-        child: const APP(),
-      ),
-    ),
-  );
+  // TODO: Firebase config, 各種初始化...
+
+  runApp(AppWidget());
 }
-
-class APP extends StatelessWidget {
-  const APP({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      // localization init
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('en'),
-        Locale('zh'),
-      ],
-      // TODO: default support ???
-      // locale: const Locale('zh'),
-      // theme init
-      theme: dayTheme,
-      darkTheme: nightTheme,
-      themeMode: ThemeMode.system,
-      // router init
-      initialRoute: AppRoutes.initialRoute,
-      getPages: AppRoutes.routes,
-    );
-  }
-}
-
-// ------------------------------------------------------------------------------------------------
-// orther
 
 // class APP extends StatelessWidget {
 //   const APP({super.key});
 
 //   @override
 //   Widget build(BuildContext context) {
-//     return const GetMaterialApp(
+//     return GetMaterialApp(
 //       debugShowCheckedModeBanner: false,
-//       localizationsDelegates: [
+//       // localization init
+//       localizationsDelegates: const [
 //         AppLocalizations.delegate,
 //         GlobalMaterialLocalizations.delegate,
 //         GlobalWidgetsLocalizations.delegate,
 //         GlobalCupertinoLocalizations.delegate,
 //       ],
-//       supportedLocales: [
+//       supportedLocales: const [
 //         Locale('en'),
 //         Locale('zh'),
 //       ],
-//       home: AppLayout(),
+//       // TODO: default support ???
+//       // locale: const Locale('zh'),
+//       // theme init
+//       theme: dayTheme,
+//       darkTheme: nightTheme,
+//       themeMode: ThemeMode.system,
+//       // router init
+//       initialRoute: AppRoutes.initialRoute,
+//       getPages: AppRoutes.routes,
 //     );
 //   }
 // }
+
+// // ------------------------------------------------------------------------------------------------
+// // orther
+
+// // class APP extends StatelessWidget {
+// //   const APP({super.key});
+
+// //   @override
+// //   Widget build(BuildContext context) {
+// //     return const GetMaterialApp(
+// //       debugShowCheckedModeBanner: false,
+// //       localizationsDelegates: [
+// //         AppLocalizations.delegate,
+// //         GlobalMaterialLocalizations.delegate,
+// //         GlobalWidgetsLocalizations.delegate,
+// //         GlobalCupertinoLocalizations.delegate,
+// //       ],
+// //       supportedLocales: [
+// //         Locale('en'),
+// //         Locale('zh'),
+// //       ],
+// //       home: AppLayout(),
+// //     );
+// //   }
+// // }
