@@ -80,6 +80,7 @@ flutter:
     # run: "flutter pub run build_runner" to generate 
     # 圖片
     - assets/images/background/
+    - assets/json/mock/CourseData.json
 
 
   # fonts:

@@ -1,35 +1,160 @@
-abstract class CourseData {
-  late List<Course> courses;
-  late List<TimeCode> timeCodes;
+class Course {
+  // 這是Course models，使用Course.fromJson在foreach即可
+  List<Courses>? courses;
+  List<TimeCodes>? timeCodes;
 
-  bool hasHoliday();
+  Course({this.courses, this.timeCodes});
+
+  Course.fromJson(Map<String, dynamic> json) {
+    if (json['courses'] != null) {
+      courses = <Courses>[];
+      json['courses'].forEach((v) {
+        courses!.add(Courses.fromJson(v));
+      });
+    }
+    if (json['timeCodes'] != null) {
+      timeCodes = <TimeCodes>[];
+      json['timeCodes'].forEach((v) {
+        timeCodes!.add(TimeCodes.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (courses != null) {
+      data['courses'] = courses!.map((v) => v.toJson()).toList();
+    }
+    if (timeCodes != null) {
+      data['timeCodes'] = timeCodes!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
 }
 
-abstract class Course {
-  late String code;
-  late String title;
-  late String className;
-  late String group;
-  late String units;
-  late String hours;
-  late String required;
-  late List<SectionTime> times;
-  late Location location;
-  late String instructors;
+class Courses {
+  String? code;
+  String? title;
+  String? className;
+  String? group;
+  String? units;
+  String? hours;
+  String? required;
+  String? at;
+  List<SectionTimes>? sectionTimes;
+  Location? location;
+  List<String>? instructors;
+
+  Courses(
+      {this.code,
+      this.title,
+      this.className,
+      this.group,
+      this.units,
+      this.hours,
+      this.required,
+      this.at,
+      this.sectionTimes,
+      this.location,
+      this.instructors});
+
+  Courses.fromJson(Map<String, dynamic> json) {
+    code = json['code'];
+    title = json['title'];
+    className = json['className'];
+    group = json['group'];
+    units = json['units'];
+    hours = json['hours'];
+    required = json['required'];
+    at = json['at'];
+    if (json['sectionTimes'] != null) {
+      sectionTimes = <SectionTimes>[];
+      json['sectionTimes'].forEach((v) {
+        sectionTimes!.add(SectionTimes.fromJson(v));
+      });
+    }
+    location =
+        json['location'] != null ? Location.fromJson(json['location']) : null;
+    instructors = json['instructors'].cast<String>();
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['code'] = code;
+    data['title'] = title;
+    data['className'] = className;
+    data['group'] = group;
+    data['units'] = units;
+    data['hours'] = hours;
+    data['required'] = required;
+    data['at'] = at;
+    if (sectionTimes != null) {
+      data['sectionTimes'] = sectionTimes!.map((v) => v.toJson()).toList();
+    }
+    if (location != null) {
+      data['location'] = location!.toJson();
+    }
+    data['instructors'] = instructors;
+    return data;
+  }
 }
 
-abstract class Location {
-  late String room;
-  late String building;
+class SectionTimes {
+  int? weekday;
+  int? index;
+
+  SectionTimes({this.weekday, this.index});
+
+  SectionTimes.fromJson(Map<String, dynamic> json) {
+    weekday = json['weekday'];
+    index = json['index'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['weekday'] = weekday;
+    data['index'] = index;
+    return data;
+  }
 }
 
-abstract class SectionTime {
-  late int weekday;
-  late int index;
+class Location {
+  String? room;
+  String? building;
+
+  Location({this.room, this.building});
+
+  Location.fromJson(Map<String, dynamic> json) {
+    room = json['room'];
+    building = json['building'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['room'] = room;
+    data['building'] = building;
+    return data;
+  }
 }
 
-abstract class TimeCode {
-  late String title;
-  late String startTime;
-  late String endTime;
+class TimeCodes {
+  String? title;
+  String? startTime;
+  String? endTime;
+
+  TimeCodes({this.title, this.startTime, this.endTime});
+
+  TimeCodes.fromJson(Map<String, dynamic> json) {
+    title = json['title'];
+    startTime = json['startTime'];
+    endTime = json['endTime'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['title'] = title;
+    data['startTime'] = startTime;
+    data['endTime'] = endTime;
+    return data;
+  }
 }
