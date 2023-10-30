@@ -49,16 +49,6 @@ class $AssetsJsonMockGen {
   List<String> get values => [courseData];
 }
 
-class $AssetsJsonMockGen {
-  const $AssetsJsonMockGen();
-
-  /// File path: assets/json/mock/CourseData.json
-  String get courseData => 'assets/json/mock/CourseData.json';
-
-  /// List of all assets
-  List<String> get values => [courseData];
-}
-
 class Assets {
   Assets._();
 

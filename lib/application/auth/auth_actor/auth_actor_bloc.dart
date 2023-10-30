@@ -1,14 +1,14 @@
 // conf
 import 'package:app_template_v0/config/index.dart';
 import 'package:app_template_v0/domain/app/auth/auth_failure.dart';
-import 'package:app_template_v0/domain/core/load_status.dart';
+import 'package:app_template_v0/domain/models/load_status.dart';
 // models
 import 'package:app_template_v0/infrastructure/app/index.dart';
 // freezed_
 import 'package:freezed_annotation/freezed_annotation.dart';
 // Option
 import 'package:dartz/dartz.dart';
-// bloc
+// blocˊ
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:flutter/foundation.dart';

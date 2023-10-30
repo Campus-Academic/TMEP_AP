@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:app_template_v0/infrastructure/app/index.dart';
 import 'package:app_template_v0/infrastructure/interface/index.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
