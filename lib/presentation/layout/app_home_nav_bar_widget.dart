@@ -19,7 +19,8 @@ class AppHomeNavBarWidget extends StatelessWidget {
     }
 
     return SizedBox(
-      height: 70.0,
+      // TODO: 高度取消
+      // height: 70.0,
       child: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: ColorStyle.black,

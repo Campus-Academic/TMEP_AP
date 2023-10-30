@@ -57,6 +57,10 @@ dependencies:
   html: ^0.15.4
   get: ^4.6.5
   meta: ^1.9.1
+  flutter_localizations:
+    sdk: flutter
+  flutter_svg: ^2.0.8
+
 
 dev_dependencies:
   flutter_test:
@@ -72,7 +76,11 @@ dev_dependencies:
 
 flutter_gen:
   output: lib/presentation/core/gen/ # Optional (default: lib/gen/)
-# The following section is specific to Flutter packages.
+  # The following section is specific to Flutter packages.
+  # Optional
+  integrations:
+    flutter_svg: true
+   
 flutter:
   generate: true # Add this line
   uses-material-design: true
@@ -80,6 +88,7 @@ flutter:
     # run: "flutter pub run build_runner" to generate 
     # 圖片
     - assets/images/background/
+    - assets/json/mock/
 
 
   # fonts:
