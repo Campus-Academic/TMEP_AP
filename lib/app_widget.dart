@@ -1,7 +1,6 @@
 // flutter core
 import 'package:flutter/material.dart';
 // bloc
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 // localization
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -17,6 +16,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
+        // TODO: 不知道 MultiRepositoryProvider要放在這還是 mian那邊
         // MultiRepositoryProvider(
         //   providers: [],
         //   child: MultiBlocProvider(

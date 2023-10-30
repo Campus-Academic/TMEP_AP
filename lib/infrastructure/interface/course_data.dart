@@ -1,10 +1,13 @@
+/// Course models
+///
+/// ＊轉json用Course.fromJson在foreach即可
 class Course {
-  // 這是Course models，使用Course.fromJson在foreach即可
   List<Courses>? courses;
   List<TimeCodes>? timeCodes;
 
   Course({this.courses, this.timeCodes});
 
+  /// The number of characters in this chunk when unsplit.
   Course.fromJson(Map<String, dynamic> json) {
     if (json['courses'] != null) {
       courses = <Courses>[];

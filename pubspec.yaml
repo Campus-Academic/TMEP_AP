@@ -57,6 +57,9 @@ dependencies:
   html: ^0.15.4
   get: ^4.6.5
   meta: ^1.9.1
+  flutter_localizations:
+    sdk: flutter
+
 
 dev_dependencies:
   flutter_test:
