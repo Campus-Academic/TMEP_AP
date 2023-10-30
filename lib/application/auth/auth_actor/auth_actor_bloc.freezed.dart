@@ -367,6 +367,8 @@ abstract class _$$LoginFailedImplCopyWith<$Res> {
       __$$LoginFailedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({AuthFailure failure});
+
+  $AuthFailureCopyWith<$Res> get failure;
 }
 
 /// @nodoc
@@ -388,6 +390,14 @@ class __$$LoginFailedImplCopyWithImpl<$Res>
           : failure // ignore: cast_nullable_to_non_nullable
               as AuthFailure,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AuthFailureCopyWith<$Res> get failure {
+    return $AuthFailureCopyWith<$Res>(_value.failure, (value) {
+      return _then(_value.copyWith(failure: value));
+    });
   }
 }
 

@@ -1,9 +1,7 @@
 // flutter core
-import 'package:app_template_v0/application/auth/index.dart';
-import 'package:flutter/material.dart';
 // bliock
 import 'package:app_template_v0/app_widget.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter/material.dart';
 
 /// The settings entry point for this app
 
@@ -12,15 +10,7 @@ void main() {
   final authActorBloc = AuthActorBloc();
 
   runApp(
-    // 使用 MultiBlocProvider 来提供 AuthActorBloc
-    MultiBlocProvider(
-      providers: [
-        BlocProvider<AuthActorBloc>(
-          create: (context) => authActorBloc,
-        ),
-      ],
-      child: AppWidget(),
-    ),
+    AppWidget(),
   );
 }
 

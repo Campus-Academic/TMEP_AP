@@ -19,19 +19,19 @@ mixin _$AuthBlocWFreezedExampleEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() signIn,
+    required TResult Function(String userAccount, String userPassword) signIn,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? signIn,
+    TResult? Function(String userAccount, String userPassword)? signIn,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? signIn,
+    TResult Function(String userAccount, String userPassword)? signIn,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -116,7 +116,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() signIn,
+    required TResult Function(String userAccount, String userPassword) signIn,
   }) {
     return initial();
   }
@@ -125,7 +125,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? signIn,
+    TResult? Function(String userAccount, String userPassword)? signIn,
   }) {
     return initial?.call();
   }
@@ -134,7 +134,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? signIn,
+    TResult Function(String userAccount, String userPassword)? signIn,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -184,6 +184,8 @@ abstract class _$$SignInImplCopyWith<$Res> {
   factory _$$SignInImplCopyWith(
           _$SignInImpl value, $Res Function(_$SignInImpl) then) =
       __$$SignInImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String userAccount, String userPassword});
 }
 
 /// @nodoc
@@ -193,54 +195,88 @@ class __$$SignInImplCopyWithImpl<$Res>
   __$$SignInImplCopyWithImpl(
       _$SignInImpl _value, $Res Function(_$SignInImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userAccount = null,
+    Object? userPassword = null,
+  }) {
+    return _then(_$SignInImpl(
+      userAccount: null == userAccount
+          ? _value.userAccount
+          : userAccount // ignore: cast_nullable_to_non_nullable
+              as String,
+      userPassword: null == userPassword
+          ? _value.userPassword
+          : userPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$SignInImpl implements _SignIn {
-  const _$SignInImpl();
+  const _$SignInImpl({required this.userAccount, required this.userPassword});
+
+  @override
+  final String userAccount;
+  @override
+  final String userPassword;
 
   @override
   String toString() {
-    return 'AuthBlocWFreezedExampleEvent.signIn()';
+    return 'AuthBlocWFreezedExampleEvent.signIn(userAccount: $userAccount, userPassword: $userPassword)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SignInImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$SignInImpl &&
+            (identical(other.userAccount, userAccount) ||
+                other.userAccount == userAccount) &&
+            (identical(other.userPassword, userPassword) ||
+                other.userPassword == userPassword));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, userAccount, userPassword);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignInImplCopyWith<_$SignInImpl> get copyWith =>
+      __$$SignInImplCopyWithImpl<_$SignInImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() signIn,
+    required TResult Function(String userAccount, String userPassword) signIn,
   }) {
-    return signIn();
+    return signIn(userAccount, userPassword);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? signIn,
+    TResult? Function(String userAccount, String userPassword)? signIn,
   }) {
-    return signIn?.call();
+    return signIn?.call(userAccount, userPassword);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? signIn,
+    TResult Function(String userAccount, String userPassword)? signIn,
     required TResult orElse(),
   }) {
     if (signIn != null) {
-      return signIn();
+      return signIn(userAccount, userPassword);
     }
     return orElse();
   }
@@ -278,12 +314,21 @@ class _$SignInImpl implements _SignIn {
 }
 
 abstract class _SignIn implements AuthBlocWFreezedExampleEvent {
-  const factory _SignIn() = _$SignInImpl;
+  const factory _SignIn(
+      {required final String userAccount,
+      required final String userPassword}) = _$SignInImpl;
+
+  String get userAccount;
+  String get userPassword;
+  @JsonKey(ignore: true)
+  _$$SignInImplCopyWith<_$SignInImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 mixin _$AuthBlocWFreezedExampleState {
   bool get isSignedIn => throw _privateConstructorUsedError;
+  LoadStatus get loadStatus => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AuthBlocWFreezedExampleStateCopyWith<AuthBlocWFreezedExampleState>
@@ -298,7 +343,7 @@ abstract class $AuthBlocWFreezedExampleStateCopyWith<$Res> {
       _$AuthBlocWFreezedExampleStateCopyWithImpl<$Res,
           AuthBlocWFreezedExampleState>;
   @useResult
-  $Res call({bool isSignedIn});
+  $Res call({bool isSignedIn, LoadStatus loadStatus});
 }
 
 /// @nodoc
@@ -316,12 +361,17 @@ class _$AuthBlocWFreezedExampleStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? isSignedIn = null,
+    Object? loadStatus = null,
   }) {
     return _then(_value.copyWith(
       isSignedIn: null == isSignedIn
           ? _value.isSignedIn
           : isSignedIn // ignore: cast_nullable_to_non_nullable
               as bool,
+      loadStatus: null == loadStatus
+          ? _value.loadStatus
+          : loadStatus // ignore: cast_nullable_to_non_nullable
+              as LoadStatus,
     ) as $Val);
   }
 }
@@ -335,7 +385,7 @@ abstract class _$$AuthBlocWFreezedExampleStateImplCopyWith<$Res>
       __$$AuthBlocWFreezedExampleStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isSignedIn});
+  $Res call({bool isSignedIn, LoadStatus loadStatus});
 }
 
 /// @nodoc
@@ -352,12 +402,17 @@ class __$$AuthBlocWFreezedExampleStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isSignedIn = null,
+    Object? loadStatus = null,
   }) {
     return _then(_$AuthBlocWFreezedExampleStateImpl(
       isSignedIn: null == isSignedIn
           ? _value.isSignedIn
           : isSignedIn // ignore: cast_nullable_to_non_nullable
               as bool,
+      loadStatus: null == loadStatus
+          ? _value.loadStatus
+          : loadStatus // ignore: cast_nullable_to_non_nullable
+              as LoadStatus,
     ));
   }
 }
@@ -365,15 +420,18 @@ class __$$AuthBlocWFreezedExampleStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AuthBlocWFreezedExampleStateImpl extends _AuthBlocWFreezedExampleState {
-  const _$AuthBlocWFreezedExampleStateImpl({required this.isSignedIn})
+  const _$AuthBlocWFreezedExampleStateImpl(
+      {required this.isSignedIn, required this.loadStatus})
       : super._();
 
   @override
   final bool isSignedIn;
+  @override
+  final LoadStatus loadStatus;
 
   @override
   String toString() {
-    return 'AuthBlocWFreezedExampleState(isSignedIn: $isSignedIn)';
+    return 'AuthBlocWFreezedExampleState(isSignedIn: $isSignedIn, loadStatus: $loadStatus)';
   }
 
   @override
@@ -382,11 +440,13 @@ class _$AuthBlocWFreezedExampleStateImpl extends _AuthBlocWFreezedExampleState {
         (other.runtimeType == runtimeType &&
             other is _$AuthBlocWFreezedExampleStateImpl &&
             (identical(other.isSignedIn, isSignedIn) ||
-                other.isSignedIn == isSignedIn));
+                other.isSignedIn == isSignedIn) &&
+            (identical(other.loadStatus, loadStatus) ||
+                other.loadStatus == loadStatus));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isSignedIn);
+  int get hashCode => Object.hash(runtimeType, isSignedIn, loadStatus);
 
   @JsonKey(ignore: true)
   @override
@@ -400,11 +460,15 @@ class _$AuthBlocWFreezedExampleStateImpl extends _AuthBlocWFreezedExampleState {
 abstract class _AuthBlocWFreezedExampleState
     extends AuthBlocWFreezedExampleState {
   const factory _AuthBlocWFreezedExampleState(
-      {required final bool isSignedIn}) = _$AuthBlocWFreezedExampleStateImpl;
+          {required final bool isSignedIn,
+          required final LoadStatus loadStatus}) =
+      _$AuthBlocWFreezedExampleStateImpl;
   const _AuthBlocWFreezedExampleState._() : super._();
 
   @override
   bool get isSignedIn;
+  @override
+  LoadStatus get loadStatus;
   @override
   @JsonKey(ignore: true)
   _$$AuthBlocWFreezedExampleStateImplCopyWith<

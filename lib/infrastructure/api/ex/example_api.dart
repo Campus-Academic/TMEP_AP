@@ -1,8 +1,8 @@
 // conf
 import 'package:app_template_v0/config/index.dart';
-// interface
-import 'package:app_template_v0/infrastructure/interface/index.dart';
+
 // url
+import '../../app/index.dart';
 import 'constant/url.dart';
 // package
 import 'package:http/http.dart' as http;
