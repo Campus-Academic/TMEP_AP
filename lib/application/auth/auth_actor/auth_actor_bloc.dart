@@ -1,5 +1,5 @@
 // conf
-import 'package:app_template_v0/config/index.dart';
+// import 'package:app_template_v0/config/index.dart';
 // models
 import 'package:app_template_v0/infrastructure/interface/index.dart';
 // freezed_
@@ -8,7 +8,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:dartz/dartz.dart';
 // bloc
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 import 'package:flutter/foundation.dart';
 import 'package:bloc_concurrency/bloc_concurrency.dart';
 

@@ -5,3 +5,6 @@
 
 // base widgets export
 export './base/index.dart';
+
+// orther widgets export
+export './orther/index.dart';

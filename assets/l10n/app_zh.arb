@@ -66,5 +66,10 @@
   "scoreConduct": "操行成績：",
   "scoreAverage": "總平均：",
   "scoreRankingByClass": "班名次：",
-  "scoreRankingByDepartment": "系名次："
+  "scoreRankingByDepartment": "系名次：",
+
+
+
+  "homePage": "首頁"
+
 }

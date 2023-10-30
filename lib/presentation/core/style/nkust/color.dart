@@ -1,8 +1,6 @@
-import 'package:app_template_v0/presentation/core/style/nkust/index.dart';
 import 'package:flutter/material.dart';
 
-/// extend 高科大
-class ColorStyle extends NKUSTColorStyle {
+class NKUSTColorStyle {
   static const black = Color(0xff000000);
 
   static const darkGrey = Color(0xff666666);

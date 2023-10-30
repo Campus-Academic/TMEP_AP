@@ -66,5 +66,8 @@
   "scoreConduct": "Conduct Score:",
   "scoreAverage": "Average:",
   "scoreRankingByClass": "Class Rank:",
-  "scoreRankingByDepartment": "Department Rank:"
+  "scoreRankingByDepartment": "Department Rank:",
+
+
+  "homePage": "Home"
 }

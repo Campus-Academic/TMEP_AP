@@ -1,3 +1,5 @@
+// ignore_for_file: unused_element
+
 part of 'auth_actor_bloc.dart';
 
 @freezed

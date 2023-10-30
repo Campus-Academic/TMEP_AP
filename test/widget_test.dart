@@ -18,20 +18,7 @@ import 'package:app_template_v0/main.dart';
 
 import 'dart:convert';
 
+/// 這是測試 widgets
 void main() {
-  testWidgets('Test Case: Course.fromJson', (WidgetTester tester) async {
-    // 用 rootBundle 獲取 json檔案
-    rootBundle.loadString("assets/json/mock/CourseData.json").then((data) {
-      final jsonResult = jsonDecode(data.toString());
-      Course course = Course.fromJson(jsonResult);
-      course.courses?.forEach((courses) {
-        if (kDebugMode) {
-          print(courses.title);
-          print(courses.className);
-        } // 假設 courseCode 是 Courses 物件的屬性
-      });
-    });
-  });
-
   // 其他測試案例可以放在這裡
 }

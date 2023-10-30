@@ -70,6 +70,8 @@ class LoginPage extends StatelessWidget {
                 // context
                 //     .read<AuthBloc>()
                 //     .updateCredentials(username, password, true);
+
+                //  push to apphomerouter
                 context.router
                   ..popUntilRoot()
                   ..replace(const AppHomeNavRoute());

@@ -8,7 +8,7 @@ const kFontFamily = 'Noto Sans';
 const double kFontSizeH1 = 28.0;
 const double kFontSizeH2 = 20.0;
 // Body
-const double kFontSizeB1 = 15.0; // 大 Body
+const double kFontSizeB1 = 40.0; // 大 Body
 const double kFontSizeB2 = 12.0; // 內文
 
 // Weight
