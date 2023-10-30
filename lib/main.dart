@@ -1,14 +1,16 @@
 // flutter core
-import 'package:flutter/material.dart';
-
+// bliock
 import 'package:app_template_v0/app_widget.dart';
+import 'package:flutter/material.dart';
 
 /// The settings entry point for this app
 
 void main() {
   // TODO: Firebase config, 各種初始化...
 
-  runApp(AppWidget());
+  runApp(
+    AppWidget(),
+  );
 }
 
 // class APP extends StatelessWidget {
