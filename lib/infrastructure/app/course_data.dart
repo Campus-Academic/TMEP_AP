@@ -1,3 +1,6 @@
+// TODO: 請參考domain-schedule-course_data.dart及infrastructure-schedule下的dto檔案
+/// 把data model跟dto(data transfer object)分開，彈性會比較大
+
 /// Course models
 ///
 /// ＊轉json用Course.fromJson在foreach即可
