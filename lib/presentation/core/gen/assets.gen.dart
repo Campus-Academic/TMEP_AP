@@ -11,6 +11,31 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/arrow_forward_ios.svg
+  SvgGenImage get arrowForwardIos =>
+      const SvgGenImage('assets/icons/arrow_forward_ios.svg');
+
+  /// File path: assets/icons/brand_awareness.svg
+  SvgGenImage get brandAwareness =>
+      const SvgGenImage('assets/icons/brand_awareness.svg');
+
+  /// File path: assets/icons/flag.svg
+  SvgGenImage get flag => const SvgGenImage('assets/icons/flag.svg');
+
+  /// File path: assets/icons/pace.svg
+  SvgGenImage get pace => const SvgGenImage('assets/icons/pace.svg');
+
+  /// File path: assets/icons/sell.svg
+  SvgGenImage get sell => const SvgGenImage('assets/icons/sell.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values =>
+      [arrowForwardIos, brandAwareness, flag, pace, sell];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -24,19 +49,39 @@ class $AssetsJsonGen {
   $AssetsJsonMockGen get mock => const $AssetsJsonMockGen();
 }
 
+class $AssetsMockGen {
+  const $AssetsMockGen();
+
+  /// File path: assets/mock/test1.png
+  AssetGenImage get test1 => const AssetGenImage('assets/mock/test1.png');
+
+  /// File path: assets/mock/test2.png
+  AssetGenImage get test2 => const AssetGenImage('assets/mock/test2.png');
+
+  /// File path: assets/mock/test3.png
+  AssetGenImage get test3 => const AssetGenImage('assets/mock/test3.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [test1, test2, test3];
+}
+
 class $AssetsImagesBackgroundGen {
   const $AssetsImagesBackgroundGen();
+
+  /// File path: assets/images/background/bus-banner-cover.png
+  AssetGenImage get busBannerCover =>
+      const AssetGenImage('assets/images/background/bus-banner-cover.png');
 
   /// File path: assets/images/background/cover.svg
   SvgGenImage get cover =>
       const SvgGenImage('assets/images/background/cover.svg');
 
-  /// File path: assets/images/background/example.png
-  AssetGenImage get example =>
-      const AssetGenImage('assets/images/background/example.png');
+  /// File path: assets/images/background/home_background.svg
+  SvgGenImage get homeBackground =>
+      const SvgGenImage('assets/images/background/home_background.svg');
 
   /// List of all assets
-  List<dynamic> get values => [cover, example];
+  List<dynamic> get values => [busBannerCover, cover, homeBackground];
 }
 
 class $AssetsJsonMockGen {
@@ -45,15 +90,20 @@ class $AssetsJsonMockGen {
   /// File path: assets/json/mock/CourseData.json
   String get courseData => 'assets/json/mock/CourseData.json';
 
+  /// File path: assets/json/mock/Notification.json
+  String get notification => 'assets/json/mock/Notification.json';
+
   /// List of all assets
-  List<String> get values => [courseData];
+  List<String> get values => [courseData, notification];
 }
 
 class Assets {
   Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsJsonGen json = $AssetsJsonGen();
+  static const $AssetsMockGen mock = $AssetsMockGen();
 }
 
 class AssetGenImage {

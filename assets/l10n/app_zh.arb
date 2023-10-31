@@ -1,7 +1,9 @@
 {
   "appName": "校務通",
   "comment0": "*資訊頁面*",
-  "news": "最新消息",
+
+
+  "news": "最新活動",
   "noLogin": "尚未登入",
   "login": "登入",
   "menuBtnHovering": "開啟導覽選單",
@@ -16,10 +18,15 @@
   "dayoff": "線上請假",
   "absenceSearch": "缺況查詢",
   "dayoffSearch": "請假查詢",
+
+  
   "bus": "校車系統",
   "busReservation": "校車預約",
   "busLog": "校車紀錄",
   "busFine": "校車罰鍰",
+
+
+
   "schoolNews": "校園資訊",
   "about": "關於我們",
   "setting": "設定",

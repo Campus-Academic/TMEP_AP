@@ -1,6 +1,7 @@
 // conf
 import 'package:app_template_v0/config/index.dart';
 import 'package:app_template_v0/domain/app/auth/auth_failure.dart';
+import 'package:app_template_v0/domain/models/index.dart';
 import 'package:app_template_v0/domain/models/load_status.dart';
 // models
 import 'package:app_template_v0/infrastructure/app/index.dart';

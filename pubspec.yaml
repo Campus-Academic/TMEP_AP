@@ -57,9 +57,13 @@ dependencies:
   html: ^0.15.4
   get: ^4.6.5
   meta: ^1.9.1
+  # localizations
   flutter_localizations:
     sdk: flutter
+  # support svg
   flutter_svg: ^2.0.8
+  # carousel widget
+  carousel_slider: ^4.2.1
 
 
 dev_dependencies:
@@ -88,7 +92,10 @@ flutter:
     # run: "flutter pub run build_runner" to generate 
     # 圖片
     - assets/images/background/
+    - assets/icons/
+    - assets/mock/
     - assets/json/mock/
+  
 
 
   # fonts:

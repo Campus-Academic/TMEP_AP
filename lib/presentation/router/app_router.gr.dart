@@ -8,16 +8,18 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:app_template_v0/presentation/features/auth/login_page.dart'
+    as _i5;
+import 'package:app_template_v0/presentation/features/home/home_page.dart'
+    as _i3;
+import 'package:app_template_v0/presentation/features/home/home_page_nest_example.dart'
+    as _i2;
+import 'package:app_template_v0/presentation/features/other_functions/other_functions_page.dart'
+    as _i6;
+import 'package:app_template_v0/presentation/features/schedule/schedule_page.dart'
+    as _i4;
 import 'package:app_template_v0/presentation/layout/app_home_nav_page.dart'
     as _i1;
-import 'package:app_template_v0/presentation/pages/auth/login_page.dart' as _i5;
-import 'package:app_template_v0/presentation/pages/home/home_page.dart' as _i3;
-import 'package:app_template_v0/presentation/pages/home/home_page_nest_example.dart'
-    as _i2;
-import 'package:app_template_v0/presentation/pages/other_functions/other_functions_page.dart'
-    as _i6;
-import 'package:app_template_v0/presentation/pages/schedule/schedule_page.dart'
-    as _i4;
 import 'package:app_template_v0/presentation/router/app_router.dart' as _i7;
 import 'package:auto_route/auto_route.dart' as _i8;
 

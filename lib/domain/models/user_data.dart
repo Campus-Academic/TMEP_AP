@@ -60,13 +60,3 @@ class UserData {
     );
   }
 }
-
-class AuthFailure {
-  final String code;
-  final String message;
-
-  AuthFailure({required this.code, required this.message});
-
-  @override
-  String toString() => '$code: $message';
-}

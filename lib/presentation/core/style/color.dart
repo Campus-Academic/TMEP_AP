@@ -15,5 +15,9 @@ class ColorStyle extends NKUSTColorStyle {
 
   static const darkBlue = Color(0xff3274A4);
   static const lightBlue = Color(0xff3A86BB);
+
   static const paleBlue = Color(0xffDFF2FF);
+
+  static const Color gradientStart = Color(0xFF456FE8);
+  static const Color gradientEnd = Color(0xFF19B0EC);
 }
