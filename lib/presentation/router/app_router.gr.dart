@@ -10,7 +10,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:app_template_v0/presentation/layout/app_home_nav_page.dart'
     as _i1;
-import 'package:app_template_v0/presentation/pages/auth/login_page.dart' as _i5;
+import 'package:app_template_v0/presentation/pages/auth/login_page.dart' as _i2;
 import 'package:app_template_v0/presentation/pages/home/home_page.dart' as _i3;
 import 'package:app_template_v0/presentation/pages/home/home_page_nest_example.dart'
     as _i4;
@@ -32,10 +32,10 @@ abstract class $AppRouter extends _i8.RootStackRouter {
         child: const _i1.AppHomeNavPage(),
       );
     },
-    HomeNestRoute.name: (routeData) {
+    LoginRoute.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.HomeNestPage(),
+        child: const _i2.LoginPage(),
       );
     },
     HomeRoute.name: (routeData) {
@@ -98,15 +98,15 @@ class AppHomeNavRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.HomeNestPage]
-class HomeNestRoute extends _i8.PageRouteInfo<void> {
-  const HomeNestRoute({List<_i8.PageRouteInfo>? children})
+/// [_i2.LoginPage]
+class LoginRoute extends _i8.PageRouteInfo<void> {
+  const LoginRoute({List<_i8.PageRouteInfo>? children})
       : super(
-          HomeNestRoute.name,
+          LoginRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'HomeNestRoute';
+  static const String name = 'LoginRoute';
 
   static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
 }

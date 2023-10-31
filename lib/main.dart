@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 
 void main() {
   // TODO: Firebase config, 各種初始化...
-  final authActorBloc = AuthActorBloc();
 
   runApp(
     AppWidget(),

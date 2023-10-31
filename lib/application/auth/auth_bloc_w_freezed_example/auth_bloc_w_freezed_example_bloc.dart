@@ -1,5 +1,5 @@
 import 'package:app_template_v0/domain/core/load_status.dart';
-import 'package:app_template_v0/infrastructure/app/user_data.dart';
+import 'package:app_template_v0/domain/app/user_data.dart';
 import 'package:app_template_v0/infrastructure/repo/auth_repository.dart';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

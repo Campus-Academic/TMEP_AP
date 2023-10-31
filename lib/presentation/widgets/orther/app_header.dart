@@ -17,10 +17,10 @@ class AppHeader extends StatelessWidget {
         SizedBox(
           width: 391,
           height: 219,
-          child: Assets.images.background.cover.svg(
-            width: 391,
-            height: 219,
-          ),
+          // child: Assets.images.background.cover.svg(
+          //   width: 391,
+          //   height: 219,
+          // ),
         ),
         Positioned(
           top: 61, // 调整垂直位置以适应您的需求
