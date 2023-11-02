@@ -1,0 +1,58 @@
+{
+    "notification": [
+        {
+            "id": "1",
+            "posterLink": "https://example.com/poster1.jpg",
+            "photoLink": "https://example.com/photo1.jpg",
+            "videoLink": "https://example.com/video1.mp4",
+            "igLink": "https://www.instagram.com/example1/",
+            "fbLink": "https://www.facebook.com/example1/",
+            "communityName": "",
+            "tags": [
+                {
+                    "tag": "遊玩"
+                }
+            ], 
+            "title": "高科大Ｘ高師大 世界計畫音遊聯合比賽",
+            "department": "體育社",
+            "date": "2023-10-31",
+            "content": "This is the content for notification 1."
+        },
+        {
+            "id": "2",
+            "posterLink": "https://example.com/poster2.jpg",
+            "photoLink": "https://example.com/photo2.jpg",
+            "videoLink": "https://example.com/video2.mp4",
+            "igLink": "https://www.instagram.com/example2/",
+            "fbLink": "https://www.facebook.com/example2/",
+            "communityName": "音樂社",
+            "tags": [
+                {
+                    "tag": "音樂"
+                }
+            ], 
+            "title": "高雄市管樂團三重奏演唱會",
+            "department": "音樂社",
+            "date": "2023-11-01",
+            "content": "This is the content for notification 1."
+        },
+        {
+            "id": "3",
+            "posterLink": "https://example.com/poster2.jpg",
+            "photoLink": "https://example.com/photo2.jpg",
+            "videoLink": "https://example.com/video2.mp4",
+            "igLink": "https://www.instagram.com/example2/",
+            "fbLink": "https://www.facebook.com/example2/",
+            "communityName": "學生會",
+            "tags": [
+                {
+                    "tag": "學生會"
+                }
+            ], 
+            "title": "高科校慶運動會，來運動！踴躍參與",
+            "department": "學生會",
+            "date": "2023-12-01",
+            "content": "This is the content for notification 1."
+        }
+    ]
+}

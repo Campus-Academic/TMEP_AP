@@ -1,6 +1,6 @@
 // core
 import 'package:app_template_v0/application/auth/auth_bloc_w_freezed_example/auth_bloc_w_freezed_example_bloc.dart';
-import 'package:app_template_v0/domain/core/load_status.dart';
+import 'package:app_template_v0/domain/models/load_status.dart';
 import 'package:app_template_v0/presentation/router/index.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
