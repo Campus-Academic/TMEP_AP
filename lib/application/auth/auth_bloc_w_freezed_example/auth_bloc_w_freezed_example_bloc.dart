@@ -1,13 +1,13 @@
-import 'package:app_template_v0/domain/models/load_status.dart';
+import 'package:app_template_v0/domain/app/user_data.dart';
 import 'package:app_template_v0/domain/models/index.dart';
 import 'package:app_template_v0/infrastructure/repo/auth_repository.dart';
 import 'package:bloc/bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc_concurrency/bloc_concurrency.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'auth_bloc_w_freezed_example_bloc.freezed.dart';
 part 'auth_bloc_w_freezed_example_event.dart';
 part 'auth_bloc_w_freezed_example_state.dart';
-part 'auth_bloc_w_freezed_example_bloc.freezed.dart';
 
 class AuthBlocWFreezedExampleBloc
     extends Bloc<AuthBlocWFreezedExampleEvent, AuthBlocWFreezedExampleState> {
