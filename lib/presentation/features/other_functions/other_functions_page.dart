@@ -8,7 +8,10 @@ class OtherFunctionsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('others'),
+      child: Text(
+        'This is the Other Functions Page',
+        style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }
