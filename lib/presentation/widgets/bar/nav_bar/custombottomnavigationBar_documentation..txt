@@ -1,0 +1,37 @@
+Flutter應用的自定義底部導航欄元件說明
+
+-簡介
+    本文檔提供了對Flutter應用中自定義底部導航欄(CustomBottomNavigationBar)小部件的詳細說明。該元件是無狀態的，用於在應用的底部提供一個導航欄，允許用戶在不同的頁面或功能模塊間進行切換。
+
+-特點
+    無狀態: CustomBottomNavigationBar是一個StatelessWidget，這意味著它不會根據用戶互動或其他因素來改變自身的狀態。
+    自適應布局: 元件會根據螢幕的寬度動態計算導航條的邊距，確保在不同的裝置上都能提供一致的外觀和體驗。
+    樣式美觀: 透過圓角和陰影效果，給導航欄添加了現代化且平面化的設計感。
+    靈活性: 可以定義是否登錄的狀態、選中項目的索引、用戶圖像路徑等。
+    
+-組件結構
+    isLogged: 一個布林值，表示用戶是否已登錄。
+    selectedIndex: 一個整數值，表示當前選中的導航項目的索引。
+    onItemSelected: 一個回調函數，當導航項目被選中時觸發，並傳遞新的索引值。
+    userImagePath: 一個可選字符串，表示用戶圖像的路徑，若用戶未設定圖像則可以為空。
+
+-布局與樣式
+    導航欄使用SafeArea包裹，確保元件內容不會被螢幕頂部的刘海或是底部的導航按鈕遮擋。
+    使用Container設置背景透明，並通過Padding設定內邊距，left和right的值根據螢幕寬度進行計算。
+    內部再嵌套一個Container，用於設定圓角邊框和陰影，增強視覺效果。
+    通過Row構建一系列橫向排列的導航項目，使用spaceAround確保元素之間的間隔均勻。
+
+-導航項目
+    包含五個導航項目，每個導航項目都是一個NavBarItem元件：
+    首頁 (MyIcons.home): 當selectedIndex為0時被選中。
+    App (MyIcons.apps): 當selectedIndex為1時被選中。
+    校車 (MyIcons.directionsBus): 當selectedIndex為2時被選中。
+    學習 (MyIcons.otherAdmission): 當selectedIndex為3時被選中。
+    設定 (MyIcons.setting): 當selectedIndex為4時被選中，如果用戶已登錄且設定了頭像，則會顯示用戶圖像。
+
+-交互反饋
+    每個NavBarItem都有一個onTap回調函數，當項目被點擊時，會執行onItemSelected函數，並傳遞相應項目的索引，觸發應用中相應頁面的切換。
+
+-使用方法
+    將CustomBottomNavigationBar作為一個元件放置在Flutter應用的頁面布局底部即可。需要提供isLogged、selectedIndex和onItemSelected參數，以及可選的userImagePath。
+
