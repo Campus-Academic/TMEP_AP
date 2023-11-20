@@ -20,7 +20,7 @@ void main() {
 //   Widget build(BuildContext context) {
 //     return GetMaterialApp(
 //       debugShowCheckedModeBanner: false,
-//       // localization init
+      // localization init
 //       localizationsDelegates: const [
 //         AppLocalizations.delegate,
 //         GlobalMaterialLocalizations.delegate,
