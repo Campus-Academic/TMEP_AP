@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 Widget buildTextRow({
@@ -111,7 +112,9 @@ Widget buildTextRow({
                 alignment: Alignment.centerRight,
                 child: InkWell(
                   onTap: () {
-                    print("test");
+                    if (kDebugMode) {
+                      print("test");
+                    }
                   },
                   child: Icon(
                     Icons.chevron_right,

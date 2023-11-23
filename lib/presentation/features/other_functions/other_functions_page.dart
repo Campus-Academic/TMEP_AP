@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:app_template_v0/presentation/widgets/index.dart';
 import 'package:auto_route/auto_route.dart';
 // app_localizations
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 @RoutePage()
 class OtherFunctionsPage extends StatelessWidget {
@@ -25,7 +24,7 @@ class OtherFunctionsPage extends StatelessWidget {
               onPressed: () {},
             ),
           ),
-          Positioned(
+          const Positioned(
             top: 129,
             left: 0,
             right: 0,

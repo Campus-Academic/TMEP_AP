@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'setting_page_utils.dart';
 
+// ignore: non_constant_identifier_names
 Widget SystemLayout() {
   return SizedBox(
     width: 355,
@@ -17,7 +18,7 @@ Widget SystemLayout() {
           child: Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12.0),
-              side: BorderSide(color: Colors.grey, width: 3.0),
+              side: const BorderSide(color: Colors.grey, width: 3.0),
             ),
             child: Container(
               color: Colors.transparent,
@@ -28,7 +29,7 @@ Widget SystemLayout() {
                     buildTextRow(
                       icon: Icons.settings,
                       iconText: '系統設定',
-                      textColor: Color(0xFF19B0EC),
+                      textColor: const Color(0xFF19B0EC),
                       textSize: 18.0,
                       iconSize: 40.0,
                     ),
@@ -36,8 +37,8 @@ Widget SystemLayout() {
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Container(
                         height: 2.0,
-                        color: Color(0xFFE5E5E5),
-                        margin: EdgeInsets.symmetric(vertical: 5.0),
+                        color: const Color(0xFFE5E5E5),
+                        margin: const EdgeInsets.symmetric(vertical: 5.0),
                       ),
                     ),
                     buildTextRow(
@@ -50,8 +51,8 @@ Widget SystemLayout() {
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Container(
                         height: 2.0,
-                        color: Color(0xFFE5E5E5),
-                        margin: EdgeInsets.symmetric(vertical: 5.0),
+                        color: const Color(0xFFE5E5E5),
+                        margin: const EdgeInsets.symmetric(vertical: 5.0),
                       ),
                     ),
                     buildTextRow(
@@ -64,8 +65,8 @@ Widget SystemLayout() {
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Container(
                         height: 2.0,
-                        color: Color(0xFFE5E5E5),
-                        margin: EdgeInsets.symmetric(vertical: 5.0),
+                        color: const Color(0xFFE5E5E5),
+                        margin: const EdgeInsets.symmetric(vertical: 5.0),
                       ),
                     ),
                     buildTextRow(

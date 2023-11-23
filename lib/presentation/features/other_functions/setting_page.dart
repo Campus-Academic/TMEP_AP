@@ -7,7 +7,6 @@ import 'setting_page_system.dart';
 
 class SettingPage extends StatelessWidget {
   final int page; // 定義一個變數
-
   const SettingPage({Key? key, required this.page}) : super(key: key);
 
   @override
