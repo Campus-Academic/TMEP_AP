@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'setting_page_utils.dart';
+import '../Mini/CustomDivider.dart';
+import '../Mini/setting_page_utils.dart';
 
 // ignore: non_constant_identifier_names
 Widget OtherLayout() {
@@ -33,42 +34,21 @@ Widget OtherLayout() {
                       textSize: 18.0,
                       iconSize: 40.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       iconText: '關於我們',
                       miniText: '開發工作人員',
                       showButtonIcon: true,
                       showminitext: true,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       iconText: '回饋意見',
                       miniText: '私訊粉絲專頁',
                       showButtonIcon: true,
                       showminitext: true,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       iconText: 'App版本',
                       miniText: 'v3.10.1',

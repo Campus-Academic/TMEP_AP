@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'setting_page_utils.dart';
+import '../Mini/CustomDivider.dart';
+import '../Mini/setting_page_utils.dart';
 
 // ignore: non_constant_identifier_names
 Widget PersonLayout() {
@@ -34,53 +35,25 @@ Widget PersonLayout() {
                       textColor: const Color(0xFF19B0EC),
                       textSize: 18.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       icon: Icons.badge,
                       iconText: '姓名',
                       babyText: '蔡尚儒',
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       icon: Icons.school,
                       iconText: '學號',
                       babyText: 'C111151112',
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       icon: Icons.local_library,
                       iconText: '班級',
                       babyText: '四資工二甲',
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       icon: Icons.logout,
                       iconText: '登出',

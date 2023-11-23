@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'setting_page_utils.dart';
+import '../Mini/CustomDivider.dart';
+import '../Mini/setting_page_utils.dart';
 
 // ignore: non_constant_identifier_names
 Widget NotifyLayout() {
@@ -33,28 +34,14 @@ Widget NotifyLayout() {
                       textSize: 18.0,
                       iconSize: 40.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       iconText: '上課提醒',
                       miniText: '上課前十分鐘提醒 點即可取消的通知',
                       showButtonIcon: true,
                       showminitext: true,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       iconText: '校車提醒',
                       miniText: '發車前30分鐘提醒',

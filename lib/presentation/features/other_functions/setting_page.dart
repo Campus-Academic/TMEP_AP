@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'setting_page_notify.dart';
-import 'setting_page_other.dart';
-import 'setting_page_person.dart';
-import 'setting_page_system.dart';
+import 'UI/setting_page_notify.dart';
+import 'UI/setting_page_other.dart';
+import 'UI/setting_page_person.dart';
+import 'UI/setting_page_system.dart';
 
 class SettingPage extends StatelessWidget {
   final int page; // 定義一個變數

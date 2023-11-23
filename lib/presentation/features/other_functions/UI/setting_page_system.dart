@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'setting_page_utils.dart';
+import '../Mini/CustomDivider.dart';
+import '../Mini/setting_page_utils.dart';
 
 // ignore: non_constant_identifier_names
 Widget SystemLayout() {
@@ -33,42 +34,21 @@ Widget SystemLayout() {
                       textSize: 18.0,
                       iconSize: 40.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       iconText: '語言',
                       miniText: '系統語言',
                       showButtonIcon: true,
                       showminitext: true,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       iconText: '主題',
                       miniText: '系統主題',
                       showButtonIcon: true,
                       showminitext: true,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Container(
-                        height: 2.0,
-                        color: const Color(0xFFE5E5E5),
-                        margin: const EdgeInsets.symmetric(vertical: 5.0),
-                      ),
-                    ),
+                    const CustomDivider(),
                     buildTextRow(
                       iconText: '顯示大頭貼',
                       miniText: 'tab bar是否顯示頭貼',
