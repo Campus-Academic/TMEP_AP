@@ -80,8 +80,13 @@ class $AssetsImagesBackgroundGen {
   SvgGenImage get homeBackground =>
       const SvgGenImage('assets/images/background/home_background.svg');
 
+  /// File path: assets/images/background/undraw_book_lover_re_rwjy 1.svg
+  SvgGenImage get undrawBookLoverReRwjy1 => const SvgGenImage(
+      'assets/images/background/undraw_book_lover_re_rwjy 1.svg');
+
   /// List of all assets
-  List<dynamic> get values => [busBannerCover, cover, homeBackground];
+  List<dynamic> get values =>
+      [busBannerCover, cover, homeBackground, undrawBookLoverReRwjy1];
 }
 
 class $AssetsJsonMockGen {

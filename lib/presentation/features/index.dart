@@ -11,7 +11,7 @@ export 'school_links_page.dart';
 
 // AUTH =================================================================
 // login page
-export 'auth/login_page.dart';
+export 'auth/login/login_page.dart';
 // logout page
 export 'auth/logout_page.dart';
 
