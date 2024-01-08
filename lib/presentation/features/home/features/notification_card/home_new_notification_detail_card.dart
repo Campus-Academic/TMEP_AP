@@ -26,10 +26,9 @@ class HomeNewNotificationDetailCard extends StatelessWidget {
             height: 20,
           ),
           // 圖片
-          Card(
-            child: SizedBox(
-                width: 340, height: 483, child: Assets.mock.banner.image()),
-          ),
+
+          SizedBox(width: 340, height: 483, child: Assets.mock.banner.image()),
+
           const HomeNewNotificationDetailArticle(
             title: '高科校慶運動會，來運動！踴躍參與',
             content:
