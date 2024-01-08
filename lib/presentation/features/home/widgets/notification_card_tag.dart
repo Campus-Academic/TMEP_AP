@@ -23,22 +23,28 @@ class NotificationCardTag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 60,
       child: Card(
         color: color,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center, // 子元素居中对齐
           children: [
-            assets,
             const SizedBox(width: 5.0),
-            Text(
-              tagName,
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: kFontWeightNormal,
-                color: Theme.of(context).focusColor,
+            Padding(
+              padding: const EdgeInsets.all(2.0), // 第一个元素的内边距
+              child: assets,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 3),
+              child: Text(
+                tagName,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: kFontWeightNormal,
+                  color: Theme.of(context).focusColor,
+                ),
               ),
             ),
+            const SizedBox(width: 5.0),
           ],
         ),
       ),

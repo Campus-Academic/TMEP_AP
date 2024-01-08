@@ -52,6 +52,9 @@ class $AssetsJsonGen {
 class $AssetsMockGen {
   const $AssetsMockGen();
 
+  /// File path: assets/mock/banner.png
+  AssetGenImage get banner => const AssetGenImage('assets/mock/banner.png');
+
   /// File path: assets/mock/test1.png
   AssetGenImage get test1 => const AssetGenImage('assets/mock/test1.png');
 
@@ -62,7 +65,7 @@ class $AssetsMockGen {
   AssetGenImage get test3 => const AssetGenImage('assets/mock/test3.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [test1, test2, test3];
+  List<AssetGenImage> get values => [banner, test1, test2, test3];
 }
 
 class $AssetsImagesBackgroundGen {

@@ -9,18 +9,18 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:app_template_v0/presentation/features/auth/login/login_page.dart'
-    as _i7;
+    as _i5;
 import 'package:app_template_v0/presentation/features/home/home_page.dart'
     as _i3;
 import 'package:app_template_v0/presentation/features/home/home_page_nest_example.dart'
     as _i2;
 import 'package:app_template_v0/presentation/features/other_functions/other_functions_page.dart'
-    as _i5;
+    as _i6;
 import 'package:app_template_v0/presentation/features/schedule/schedule_page.dart'
     as _i4;
 import 'package:app_template_v0/presentation/layout/app_home_nav_page.dart'
     as _i1;
-import 'package:app_template_v0/presentation/router/app_router.dart' as _i6;
+import 'package:app_template_v0/presentation/router/app_router.dart' as _i7;
 import 'package:auto_route/auto_route.dart' as _i8;
 
 abstract class $AppRouter extends _i8.RootStackRouter {
@@ -52,34 +52,34 @@ abstract class $AppRouter extends _i8.RootStackRouter {
         child: const _i4.SchedulePage(),
       );
     },
+    LoginRoute.name: (routeData) {
+      return _i8.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i5.LoginPage(),
+      );
+    },
     OtherFunctionsRoute.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.OtherFunctionsPage(),
+        child: const _i6.OtherFunctionsPage(),
       );
     },
     HomeTab.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.HomeTabPage(),
+        child: const _i7.HomeTabPage(),
       );
     },
     ScheduleTab.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.ScheduleTabPage(),
+        child: const _i7.ScheduleTabPage(),
       );
     },
     OthersTab.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.OthersTabPage(),
-      );
-    },
-    LoginRoute.name: (routeData) {
-      return _i8.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i7.LoginPage(),
+        child: const _i7.OthersTabPage(),
       );
     },
   };
@@ -142,7 +142,21 @@ class ScheduleRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.OtherFunctionsPage]
+/// [_i5.LoginPage]
+class LoginRoute extends _i8.PageRouteInfo<void> {
+  const LoginRoute({List<_i8.PageRouteInfo>? children})
+      : super(
+          LoginRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'LoginRoute';
+
+  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i6.OtherFunctionsPage]
 class OtherFunctionsRoute extends _i8.PageRouteInfo<void> {
   const OtherFunctionsRoute({List<_i8.PageRouteInfo>? children})
       : super(
@@ -156,7 +170,7 @@ class OtherFunctionsRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i6.HomeTabPage]
+/// [_i7.HomeTabPage]
 class HomeTab extends _i8.PageRouteInfo<void> {
   const HomeTab({List<_i8.PageRouteInfo>? children})
       : super(
@@ -170,7 +184,7 @@ class HomeTab extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i6.ScheduleTabPage]
+/// [_i7.ScheduleTabPage]
 class ScheduleTab extends _i8.PageRouteInfo<void> {
   const ScheduleTab({List<_i8.PageRouteInfo>? children})
       : super(
@@ -184,7 +198,7 @@ class ScheduleTab extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i6.OthersTabPage]
+/// [_i7.OthersTabPage]
 class OthersTab extends _i8.PageRouteInfo<void> {
   const OthersTab({List<_i8.PageRouteInfo>? children})
       : super(
@@ -193,20 +207,6 @@ class OthersTab extends _i8.PageRouteInfo<void> {
         );
 
   static const String name = 'OthersTab';
-
-  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i7.LoginPage]
-class LoginRoute extends _i8.PageRouteInfo<void> {
-  const LoginRoute({List<_i8.PageRouteInfo>? children})
-      : super(
-          LoginRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'LoginRoute';
 
   static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
 }

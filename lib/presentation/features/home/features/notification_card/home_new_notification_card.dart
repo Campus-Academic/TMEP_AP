@@ -5,6 +5,8 @@ import 'package:app_template_v0/presentation/core/gen/assets.gen.dart';
 
 import 'package:flutter/material.dart';
 
+import '../index.dart';
+
 class HomeNewNotificationCard extends StatefulWidget {
   final String clubCount;
   final String clubTitle;
@@ -81,9 +83,17 @@ class _HomeNewNotificationCardState extends State<HomeNewNotificationCard> {
         ),
         InkWell(
           onTap: () {
-            // 在这里添加图标被点击时的处理逻辑
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const HomeNewNotificationDetailCard(
+                    content: 'Hello from Source Page!'),
+              ),
+            );
           },
-          child: Assets.icons.arrowForwardIos.svg(),
+          child: Container(
+            child: Assets.icons.arrowForwardIos.svg(height: 30),
+          ),
         )
       ],
     );

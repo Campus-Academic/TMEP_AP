@@ -62,8 +62,10 @@ dependencies:
     sdk: flutter
   # support svg
   flutter_svg: ^2.0.8
-  # carousel widget
+  # carousel widget｀
   carousel_slider: ^4.2.1
+  faker: ^2.1.0
+
 
 
 dev_dependencies:
