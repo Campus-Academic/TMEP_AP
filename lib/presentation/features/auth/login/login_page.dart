@@ -15,7 +15,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 // icon
 
-import '../widgets/index.dart';
+import 'widgets/index.dart';
 
 // Copyright 2023 The Flutter Authors. All rights reserved.
 // Author: 賴泓瑋
